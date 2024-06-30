@@ -1,0 +1,31 @@
+1,Gourmet Delight,Fine dining experience with a touch of elegance,2020-01-15,2021-01-15
+2,Home Comforts,Homestyle meals with a cozy feel,2020-02-20,2021-02-20
+3,Healthy Choices,Nutrition-packed meals for health-conscious individuals,2020-03-25,2021-03-25
+4,Exotic Flavors,A journey through exotic and vibrant cuisines,2020-04-30,2021-04-30
+5,BBQ Heaven,Smoky and savory barbecue delights,2020-05-05,2021-05-05
+6,Seafood Paradise,Fresh and succulent seafood dishes,2020-06-10,2021-06-10
+7,Vegan Feast,Plant-based gourmet meals,2020-07-15,2021-07-15
+8,Sweet Endings,Decadent desserts and sweet treats,2020-08-20,2021-08-20
+9,Comfort Cravings,Soul-soothing comfort food,2020-09-25,2021-09-25
+10,Italian Classics,Traditional Italian cuisine with a modern twist,2020-10-30,2021-10-30
+11,Asian Fusion,Innovative fusion of Asian flavors,2020-11-04,2021-11-04
+12,Fiesta Mexicana,Vibrant and flavorful Mexican dishes,2020-12-09,2021-12-09
+13,French Elegance,Sophisticated and classic French cuisine,2021-01-14,2022-01-14
+14,Mediterranean Magic,Heart-healthy Mediterranean dishes,2021-02-18,2022-02-18
+15,Street Food Extravaganza,Authentic street food from around the world,2021-03-25,2022-03-25
+16,Rustic Retreat,Hearty and rustic farm-to-table meals,2021-04-30,2022-04-30
+17,Sushi Sensations,Exquisite sushi and Japanese delicacies,2021-05-05,2022-05-05
+18,Tropical Taste,Fresh and vibrant tropical flavors,2021-06-10,2022-06-10
+19,Burger Bonanza,Gourmet burgers with a variety of toppings,2021-07-15,2022-07-15
+20,Brunch Bliss,Delightful and indulgent brunch options,2021-08-20,2022-08-20
+21,Tapas Treats,Spanish tapas and small plates,2021-09-25,2022-09-25
+22,Middle Eastern Delights,Rich and aromatic Middle Eastern cuisine,2021-10-30,2022-10-30
+23,American Diner,Classic American diner fare,2021-11-04,2022-11-04
+24,Caribbean Flavors,Spicy and bold Caribbean dishes,2021-12-09,2022-12-09
+25,Indian Spice,Aromatic and flavorful Indian cuisine,2022-01-14,2023-01-14
+26,Greek Feast,Fresh and vibrant Greek dishes,2022-02-18,2023-02-18
+27,Modern Bistro,Contemporary and chic bistro fare,2022-03-25,2023-03-25
+28,Soul Food,Heartwarming and soulful Southern cuisine,2022-04-30,2023-04-30
+29,Fusion Frenzy,A creative mix of global flavors,2022-05-05,2023-05-05
+30,Dessert Dream,Heavenly and indulgent desserts,2022-06-10,2023-06-10
+
