@@ -67,7 +67,7 @@ CREATE TABLE Catering(
 CREATE TABLE Events_(
  EventID INT NOT NULL,
  EventDate DATE NOT NULL,
- EndTime TIMESTAMP NOT NULL,
+ PaymentDeadlineDate DATE,
  CustomerID INT NOT NULL,
  VenueID INT NOT NULL,
  PRIMARY KEY (EventID),
