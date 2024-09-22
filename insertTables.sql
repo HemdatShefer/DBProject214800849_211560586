@@ -1,3 +1,17 @@
+-- Insert data into Customers
+INSERT INTO Customers (CustomerID, FirstName, LastName, PhoneNumber, BirthdayDate, LastPurchaseDate)
+VALUES (400001, 'John', 'Doe', '1234567890', TO_DATE('01-01-1980', 'DD-MM-YYYY'), TO_DATE('01-06-2023', 'DD-MM-YYYY'));
+
+INSERT INTO Customers (CustomerID, FirstName, LastName, PhoneNumber, BirthdayDate, LastPurchaseDate)
+VALUES (400002, 'Jane', 'Smith', '0987654321', TO_DATE('02-02-1990', 'DD-MM-YYYY'), TO_DATE('02-06-2023', 'DD-MM-YYYY'));
+
+INSERT INTO Customers (CustomerID, FirstName, LastName, PhoneNumber, BirthdayDate, LastPurchaseDate)
+VALUES (400003, 'Alice', 'Johnson', '0456789123', TO_DATE('15-08-1995', 'DD-MM-YYYY'), TO_DATE('15-06-2023', 'DD-MM-YYYY'));
+
+INSERT INTO Customers (CustomerID, FirstName, LastName, PhoneNumber, BirthdayDate, LastPurchaseDate)
+VALUES (400004, 'Bob', 'Williams', '0321567890', TO_DATE('05-09-1985', 'DD-MM-YYYY'), TO_DATE('10-06-2023', 'DD-MM-YYYY'));
+
+
 -- Insert data into Venues
 INSERT INTO Venues (VenueID, Name, Location, Capacity, OpenDate, RenovationDate)
 VALUES (100001, 'Grand Hall', '123 Main St', 500, TO_DATE('01-01-2000', 'DD-MM-YYYY'), TO_DATE('01-01-2020', 'DD-MM-YYYY'));
