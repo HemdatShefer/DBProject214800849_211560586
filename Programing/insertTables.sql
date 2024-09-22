@@ -1,48 +1,93 @@
 -- Insert data into Customers
 INSERT INTO Customers (CustomerID, FirstName, LastName, PhoneNumber, BirthdayDate, LastPurchaseDate)
-VALUES (1000, 'John', 'Doe', '1234567890', TO_DATE('01-01-1980', 'DD-MM-YYYY'), TO_DATE('01-06-2023', 'DD-MM-YYYY'));
+VALUES (400001, 'John', 'Doe', '1234567890', TO_DATE('01-01-1980', 'DD-MM-YYYY'), TO_DATE('01-06-2023', 'DD-MM-YYYY'));
 
 INSERT INTO Customers (CustomerID, FirstName, LastName, PhoneNumber, BirthdayDate, LastPurchaseDate)
-VALUES (2000, 'Jane', 'Smith', '0987654321', TO_DATE('02-02-1990', 'DD-MM-YYYY'), TO_DATE('02-06-2023', 'DD-MM-YYYY'));
+VALUES (400002, 'Jane', 'Smith', '0987654321', TO_DATE('02-02-1990', 'DD-MM-YYYY'), TO_DATE('02-06-2023', 'DD-MM-YYYY'));
+
+INSERT INTO Customers (CustomerID, FirstName, LastName, PhoneNumber, BirthdayDate, LastPurchaseDate)
+VALUES (400003, 'Alice', 'Johnson', '0456789123', TO_DATE('15-08-1995', 'DD-MM-YYYY'), TO_DATE('15-06-2023', 'DD-MM-YYYY'));
+
+INSERT INTO Customers (CustomerID, FirstName, LastName, PhoneNumber, BirthdayDate, LastPurchaseDate)
+VALUES (400004, 'Bob', 'Williams', '0321567890', TO_DATE('05-09-1985', 'DD-MM-YYYY'), TO_DATE('10-06-2023', 'DD-MM-YYYY'));
+
 
 -- Insert data into Venues
 INSERT INTO Venues (VenueID, Name, Location, Capacity, OpenDate, RenovationDate)
-VALUES (1000, 'Grand Hall', '123 Main St', 500, TO_DATE('01-01-2000', 'DD-MM-YYYY'), TO_DATE('01-01-2020', 'DD-MM-YYYY'));
+VALUES (100001, 'Grand Hall', '123 Main St', 500, TO_DATE('01-01-2000', 'DD-MM-YYYY'), TO_DATE('01-01-2020', 'DD-MM-YYYY'));
 
 INSERT INTO Venues (VenueID, Name, Location, Capacity, OpenDate, RenovationDate)
-VALUES (2000, 'Conference Center', '456 Elm St', 200, TO_DATE('05-05-2005', 'DD-MM-YYYY'), TO_DATE('05-05-2015', 'DD-MM-YYYY'));
+VALUES (100002, 'Conference Center', '456 Elm St', 200, TO_DATE('05-05-2005', 'DD-MM-YYYY'), TO_DATE('05-05-2015', 'DD-MM-YYYY'));
+
+INSERT INTO Venues (VenueID, Name, Location, Capacity, OpenDate, RenovationDate)
+VALUES (100003, 'Sunset Venue', '789 Oak St', 300, TO_DATE('12-06-2010', 'DD-MM-YYYY'), TO_DATE('12-06-2020', 'DD-MM-YYYY'));
+
+INSERT INTO Venues (VenueID, Name, Location, Capacity, OpenDate, RenovationDate)
+VALUES (100004, 'Lakeside Pavilion', '101 Maple St', 400, TO_DATE('22-04-2012', 'DD-MM-YYYY'), TO_DATE('22-04-2022', 'DD-MM-YYYY'));
+
 
 -- Insert data into Catering
 INSERT INTO Catering (CateringID, Name, MenuDescription, ContractStartDate, ContractEndDate)
-VALUES (1000, 'Gourmet Catering', 'Full service catering with a wide variety of menu options', TO_DATE('01-01-2020', 'DD-MM-YYYY'), TO_DATE('01-01-2025', 'DD-MM-YYYY'));
+VALUES (200001, 'Gourmet Catering', 'Full service catering with a wide variety of menu options', TO_DATE('01-01-2020', 'DD-MM-YYYY'), TO_DATE('01-01-2025', 'DD-MM-YYYY'));
 
 INSERT INTO Catering (CateringID, Name, MenuDescription, ContractStartDate, ContractEndDate)
-VALUES (2000, 'Event Catering', 'Specializing in corporate and private events', TO_DATE('01-06-2019', 'DD-MM-YYYY'), TO_DATE('01-06-2024', 'DD-MM-YYYY'));
+VALUES (200002, 'Event Catering', 'Specializing in corporate and private events', TO_DATE('01-06-2019', 'DD-MM-YYYY'), TO_DATE('01-06-2024', 'DD-MM-YYYY'));
 
--- Insert data into Events_
-INSERT INTO Events_ (EventID, EventDate, EndTime, CustomerID, VenueID)
-VALUES (1000, TO_DATE('25-12-2023', 'DD-MM-YYYY'), TO_TIMESTAMP('25-12-2023 18:00', 'DD-MM-YYYY HH24:MI'), 1000, 1000);
+INSERT INTO Catering (CateringID, Name, MenuDescription, ContractStartDate, ContractEndDate)
+VALUES (200003, 'Elegant Eats', 'Delicious meals for all occasions', TO_DATE('01-01-2021', 'DD-MM-YYYY'), TO_DATE('01-01-2026', 'DD-MM-YYYY'));
 
-INSERT INTO Events_ (EventID, EventDate, EndTime, CustomerID, VenueID)
-VALUES (2000, TO_DATE('31-12-2023', 'DD-MM-YYYY'), TO_TIMESTAMP('31-12-2023 23:00', 'DD-MM-YYYY HH24:MI'), 2000, 2000);
+INSERT INTO Catering (CateringID, Name, MenuDescription, ContractStartDate, ContractEndDate)
+VALUES (200004, 'The Chef', 'High-end cuisine for weddings and galas', TO_DATE('01-02-2022', 'DD-MM-YYYY'), TO_DATE('01-02-2027', 'DD-MM-YYYY'));
+
+
+-- Insert data into Events
+INSERT INTO Events_ (EventID, EventDate, EventConfirmationDate, CustomerID, VenueID)
+VALUES (300001, TO_DATE('25-12-2023', 'DD-MM-YYYY'), TO_DATE('29-12-2021', 'DD-MM-YYYY'), 400001, 100001);
+
+INSERT INTO Events_ (EventID, EventDate, EventConfirmationDate, CustomerID, VenueID)
+VALUES (300002, TO_DATE('31-12-2023', 'DD-MM-YYYY'), TO_DATE('13-08-2021', 'DD-MM-YYYY'), 400002, 100002);
+
+INSERT INTO Events_ (EventID, EventDate, EventConfirmationDate, CustomerID, VenueID)
+VALUES (300003, TO_DATE('10-11-2023', 'DD-MM-YYYY'), TO_DATE('05-09-2021', 'DD-MM-YYYY'), 400003, 100003);
+
+INSERT INTO Events_ (EventID, EventDate, EventConfirmationDate, CustomerID, VenueID)
+VALUES (300004, TO_DATE('15-01-2024', 'DD-MM-YYYY'), TO_DATE('02-09-2021', 'DD-MM-YYYY'), 400004, 100004);
 
 -- Insert data into Gusts
-INSERT INTO Gusts (GustID, RelationshipLevel, FirstName, LastName, InvitationDate, BirthdayDate, EventID, CustomerID)
-VALUES (1000, 'Friend', 'Alice', 'Brown', TO_DATE('01-11-2023', 'DD-MM-YYYY'), TO_DATE('15-03-1985', 'DD-MM-YYYY'), 1000, 1000);
+INSERT INTO Gusts (GustID, RelationshipLevel, FirstName, LastName, InvitationDate, ConfirmationDate, RSVPStatus, EventID, CustomerID)
+VALUES (500001, 'Friend', 'Alice', 'Brown', TO_DATE('11-12-2022', 'DD-MM-YYYY'), TO_DATE('12-12-2022', 'DD-MM-YYYY'), 'Confirmed', 300001, 400001);
 
-INSERT INTO Gusts (GustID, RelationshipLevel, FirstName, LastName, InvitationDate, BirthdayDate, EventID, CustomerID)
-VALUES (2000, 'Colleague', 'Bob', 'Green', TO_DATE('15-11-2023', 'DD-MM-YYYY'), TO_DATE('30-07-1992', 'DD-MM-YYYY'), 2000, 2000);
+INSERT INTO Gusts (GustID, RelationshipLevel, FirstName, LastName, InvitationDate, ConfirmationDate, RSVPStatus, EventID, CustomerID)
+VALUES (500002, 'Colleague', 'Bob', 'Green', TO_DATE('15-11-2022', 'DD-MM-YYYY'), TO_DATE('16-11-2022', 'DD-MM-YYYY'), 'Confirmed', 300002, 400002);
+
+INSERT INTO Gusts (GustID, RelationshipLevel, FirstName, LastName, InvitationDate, ConfirmationDate, RSVPStatus, EventID, CustomerID)
+VALUES (500003, 'Family', 'Eve', 'Davis', TO_DATE('10-01-2023', 'DD-MM-YYYY'), TO_DATE('11-01-2023', 'DD-MM-YYYY'), 'Confirmed', 300003, 400003);
+
+INSERT INTO Gusts (GustID, RelationshipLevel, FirstName, LastName, InvitationDate, ConfirmationDate, RSVPStatus, EventID, CustomerID)
+VALUES (500004, 'Friend', 'Charlie', 'Johnson', TO_DATE('01-11-2022', 'DD-MM-YYYY'), TO_DATE('02-11-2022', 'DD-MM-YYYY'), 'Confirmed', 300004, 400004);
 
 -- Insert data into Payments
-INSERT INTO Payments (PaymentID, Amount, PaymentDate, ProcessedDate, CustomerID, EventID)
-VALUES (1000, 500.00, TO_DATE('10-06-2023', 'DD-MM-YYYY'), TO_DATE('11-06-2023', 'DD-MM-YYYY'), 1000, 1000);
+INSERT INTO Payments (PaymentID, Amount, PaymentDate, PaymentDeadlineDate, CustomerID, EventID)
+VALUES (600001, 500.00, TO_DATE('10-06-2023', 'DD-MM-YYYY'), TO_DATE('01-01-2025', 'DD-MM-YYYY'), 400001, 300001);
 
-INSERT INTO Payments (PaymentID, Amount, PaymentDate, ProcessedDate, CustomerID, EventID)
-VALUES (2000, 750.00, TO_DATE('15-06-2023', 'DD-MM-YYYY'), TO_DATE('16-06-2023', 'DD-MM-YYYY'), 2000, 2000);
+INSERT INTO Payments (PaymentID, Amount, PaymentDate, PaymentDeadlineDate, CustomerID, EventID)
+VALUES (600002, 750.00, TO_DATE('15-06-2023', 'DD-MM-YYYY'), TO_DATE('01-01-2025', 'DD-MM-YYYY'), 400002, 300002);
+
+INSERT INTO Payments (PaymentID, Amount, PaymentDate, PaymentDeadlineDate, CustomerID, EventID)
+VALUES (600003, 300.00, TO_DATE('05-06-2023', 'DD-MM-YYYY'), TO_DATE('01-01-2025', 'DD-MM-YYYY'), 400003, 300003);
+
+INSERT INTO Payments (PaymentID, Amount, PaymentDate, PaymentDeadlineDate, CustomerID, EventID)
+VALUES (600004, 1000.00, TO_DATE('20-06-2023', 'DD-MM-YYYY'), TO_DATE('01-01-2025', 'DD-MM-YYYY'), 400004, 300004);
 
 -- Insert data into has_catering
 INSERT INTO has_catering (CateringID, EventID)
-VALUES (1000, 1000);
+VALUES (200001, 300001);
 
 INSERT INTO has_catering (CateringID, EventID)
-VALUES (2000, 2000);
+VALUES (200002, 300002);
+
+INSERT INTO has_catering (CateringID, EventID)
+VALUES (200003, 300003);
+
+INSERT INTO has_catering (CateringID, EventID)
+VALUES (200004, 300004);
