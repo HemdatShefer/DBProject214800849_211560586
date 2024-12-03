@@ -1,22 +1,20 @@
-CREATE OR REPLACE VIEW Customer_Event_Details_View AS
-SELECT 
+CREATE OR REPLACE VIEW Basic_Event_Financial_View AS
+SELECT
     e.EventID,
-    e.EventDate,
-    e.Total_Price,
-    c.CustomerID,
-    c.FIRSTNAME AS CustomerName,  -- Corrected column name
-    p.ProducerID,
-    p.PRODUCERNAME AS ProducerName,  -- Check actual column name in Producer table
-    s.SingerID,
-    s.Sname AS SingerName
-FROM 
+    e.EventDate, 
+    e.Total_Price AS EventRevenue,
+    p.Price AS ProducerCost,
+    s.Price AS SingerCost,
+    cat.CateringCost AS CateringCost,
+    (e.Total_Price - (p.Price + s.Price + cat.CateringCost)) AS NetProfit,
+    ROUND(( (e.Total_Price - (p.Price + s.Price + cat.CateringCost)) / NULLIF(e.Total_Price, 0) ) * 100, 2) AS ProfitMarginPercent
+FROM
     Events_ e
-JOIN 
-    Customers c ON e.CustomerID = c.CustomerID
-JOIN 
+LEFT JOIN
     Producer p ON e.ProducerID = p.ProducerID
-JOIN 
-    Singer s ON e.SingerID = s.SingerID;
-
-
-
+LEFT JOIN
+    Singer s ON e.SingerID = s.SingerID
+LEFT JOIN
+    has_catering hc ON e.EventID = hc.EventID
+LEFT JOIN
+    Catering cat ON hc.CateringID = cat.CateringID;
