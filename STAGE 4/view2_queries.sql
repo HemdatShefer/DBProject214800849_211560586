@@ -1,3 +1,4 @@
+--query 1 -  identify customers based on their event count
 SELECT
     EventID,
     ProfitMarginPercent
@@ -6,7 +7,7 @@ FROM
 ORDER BY
     ProfitMarginPercent DESC
 
-
+--query 2 - analyze and rank venues based on the average number of guests per event
 SELECT
     EXTRACT(YEAR FROM EventDate) AS EventYear,
     SUM(EventRevenue) AS TotalRevenue,
